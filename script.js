@@ -3,12 +3,6 @@
 const userNames = ['Finn', 'David', 'Kate', 'Paul', 'Zuzana', 'Ito', 'Houdini'];
 const users = userNames.map(userName => generateUser(userName));
 
-const a = document.getElementById('container');
-
-users.forEach(user => {
-  const b = createElement(user);
-  a.appendChild(b);
-});
 /**
  * DONT CHANGE THIS CODE!
  */
@@ -26,9 +20,9 @@ function createElement(object) {
   /**
    * Only fort training purpose!
    */
-  // if (object.hasOwnProperty('city')) {
-  // throw 'Change object to valid form!';
-  // }
+  if (object.hasOwnProperty('city')) {
+    throw 'Change object to valid form!';
+  }
 
   const card = document.createElement('div');
   const headline = createParagraph(object.name);
